@@ -1,0 +1,81 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SystemException&StateMachine_1",
+        "Config&StateMachine_1",
+        "boolRunProcess&StateMachine_1",
+        "Credentials&StateMachine_1",
+        "dateCaseStartTime&State_3",
+        "arrCaseID&State_3",
+        "arrExitPoint&State_3",
+        "strCaseIDText&Sequence_28"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "fiToProcessFile&Flowchart_1",
+        "intStartPageCounter&Flowchart_1",
+        "intPDFPageCount&Flowchart_1",
+        "intEndPageCounter&Flowchart_1",
+        "boolDis&Sequence_17",
+        "strFormOutput&Sequence_17",
+        "strSelectedButton&Sequence_17",
+        "dirParentFolder&Sequence_17",
+        "listFolders&Sequence_17",
+        "listFolderNames&Sequence_17",
+        "jobFormOutput&Sequence_17",
+        "dirParentFolder&Sequence_6",
+        "listFiles&Sequence_6",
+        "strFormOutput&Sequence_6",
+        "boolDis&Sequence_6",
+        "strSelectedButton&Sequence_6",
+        "listFileNames&Sequence_6",
+        "jobFormOutput&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_Config",
+        "io_Credentials"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Framework/InitAllSettings.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intStatusCode&Sequence_1",
+        "strJson&Sequence_1",
+        "objJson&Sequence_1",
+        "arrJson&Sequence_1",
+        "strUser&Sequence_1",
+        "strError&Sequence_1",
+        "strPass&Flowchart_3",
+        "strAsset&Flowchart_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_Config",
+        "out_Credentials",
+        "in_OrchestratorFolders",
+        "in_RetrieveCredentials"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
