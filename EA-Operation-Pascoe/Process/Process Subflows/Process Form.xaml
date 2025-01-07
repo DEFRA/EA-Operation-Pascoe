@@ -151,14 +151,14 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID17</x:Reference>
+      <x:Reference>__ReferenceID16</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID4">
+    <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">340,244.5</av:Point>
+          <av:Point x:Key="ShapeLocation">410,238.5</av:Point>
           <av:Size x:Key="ShapeSize">200,83</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">440,327.5 440,360.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">510,321.5 510,351.5 440,351.5 440,360.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="Log Current File" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_2">
@@ -171,7 +171,7 @@
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,94" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Extracting: &quot;+in_strFilename]" />
       </Sequence>
       <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID3">
+        <FlowStep x:Name="__ReferenceID2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">340,360.5</av:Point>
@@ -235,7 +235,7 @@
             </p2:DataExtractionScope.Extractors>
           </p2:DataExtractionScope>
           <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID5">
+            <FlowStep x:Name="__ReferenceID4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">340,477.5</av:Point>
@@ -272,7 +272,7 @@
                 <l:Log_DU_Transaction DisplayName="Log DU Transaction" sap:VirtualizedContainerService.HintSize="434,25" IN_dateConsumedDateTime="[Now]" IN_dblLicensePagesConsumed="[dblLicenseConsumption]" IN_intDocumentPages="[in_Classification.DocumentBounds.PageCount]" IN_strClassification="Intelligent Keyword Classifier" IN_strExtractorType="Form Extractor" IN_strFileName="[io_Config(&quot;SQLTransactionLogFilepath&quot;).ToString.Replace(&quot;.csv&quot;, &quot; - DU.csv&quot;)]" IN_strTransactionID="[String.Join(&quot;, &quot;, io_arrCaseID.Where(Function(s) not String.IsNullOrEmpty(s)))]" IN_strUser="[system.Environment.UserName]" IN_strWorkPackage="208" sap2010:WorkflowViewState.IdRef="Log_DU_Transaction_1" />
               </Sequence>
               <FlowStep.Next>
-                <FlowDecision x:Name="__ReferenceID14" Condition="[erExtractionResult.ResultsDocument.DocumentTypeName = &quot;Controlled Waste&quot;]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                <FlowDecision x:Name="__ReferenceID13" Condition="[erExtractionResult.ResultsDocument.DocumentTypeName = &quot;Controlled Waste&quot;]" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -283,7 +283,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
-                    <FlowStep x:Name="__ReferenceID16">
+                    <FlowStep x:Name="__ReferenceID15">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">150.25,619.5</av:Point>
@@ -293,7 +293,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <p2:ExportExtractionResults DataSet="[dsDataSetControlled]" DisplayName="Export Extraction Results" ExtractionResult="[erExtractionResult]" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_6" IncludeConfidence="False" IncludeOCRConfidence="False" />
                       <FlowStep.Next>
-                        <FlowStep x:Name="__ReferenceID2">
+                        <FlowStep x:Name="__ReferenceID1">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <av:Point x:Key="ShapeLocation">340,710.5</av:Point>
@@ -509,37 +509,23 @@
                                         </If>
                                       </Sequence>
                                       <FlowStep.Next>
-                                        <FlowStep x:Name="__ReferenceID1">
+                                        <FlowStep x:Name="__ReferenceID0">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <av:Point x:Key="ShapeLocation">350,1213.5</av:Point>
                                               <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">450,1266.5 450,1316.5</av:PointCollection>
+                                              <av:PointCollection x:Key="ConnectorLocation">550,1240 570,1240 570,1868.5 330,1868.5 330,1898.5</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Cleanse Extracted Data" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Cleanse Extracted Data.xaml">
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Cleanse Extracted Data" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process\Process Subflows\Cleanse Extracted Data.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="p:ClassificationResult" x:Key="in_Classification">
-                                                <mva:VisualBasicValue x:TypeArguments="p:ClassificationResult" ExpressionText="in_Classification" />
-                                              </InArgument>
-                                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">
-                                                <mva:VisualBasicReference x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="io_Config" />
-                                              </InOutArgument>
-                                              <InArgument x:TypeArguments="p:ExtractionResult" x:Key="in_erExtractionResult">
-                                                <mva:VisualBasicValue x:TypeArguments="p:ExtractionResult" ExpressionText="erExtractionResult" />
-                                              </InArgument>
-                                              <OutArgument x:TypeArguments="sd1:DataTable" x:Key="out_dtFinalDataControlled">
-                                                <mva:VisualBasicReference x:TypeArguments="sd1:DataTable" ExpressionText="dtFinalDataControlled" />
-                                              </OutArgument>
-                                              <OutArgument x:TypeArguments="sd1:DataTable" x:Key="out_dtFinalDataNorthern">
-                                                <mva:VisualBasicReference x:TypeArguments="sd1:DataTable" ExpressionText="dtFinalDataNorthern" />
-                                              </OutArgument>
-                                              <InArgument x:TypeArguments="sd1:DataSet" x:Key="in_dsDataSetNorthern">
-                                                <mva:VisualBasicValue x:TypeArguments="sd1:DataSet" ExpressionText="dsDataSetNorthern" />
-                                              </InArgument>
-                                              <InArgument x:TypeArguments="sd1:DataSet" x:Key="in_dsDataSetControlled">
-                                                <mva:VisualBasicValue x:TypeArguments="sd1:DataSet" ExpressionText="dsDataSetControlled" />
-                                              </InArgument>
+                                              <InArgument x:TypeArguments="p:ClassificationResult" x:Key="in_Classification">[in_Classification]</InArgument>
+                                              <InOutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="io_Config">[io_Config]</InOutArgument>
+                                              <InArgument x:TypeArguments="p:ExtractionResult" x:Key="in_erExtractionResult">[erExtractionResult]</InArgument>
+                                              <OutArgument x:TypeArguments="sd1:DataTable" x:Key="out_dtFinalDataControlled">[dtFinalDataControlled]</OutArgument>
+                                              <OutArgument x:TypeArguments="sd1:DataTable" x:Key="out_dtFinalDataNorthern">[dtFinalDataNorthern]</OutArgument>
+                                              <InArgument x:TypeArguments="sd1:DataSet" x:Key="in_dsDataSetNorthern">[dsDataSetNorthern]</InArgument>
+                                              <InArgument x:TypeArguments="sd1:DataSet" x:Key="in_dsDataSetControlled">[dsDataSetControlled]</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -548,158 +534,49 @@
                                             </sap:WorkflowViewStateService.ViewState>
                                           </ui:InvokeWorkflowFile>
                                           <FlowStep.Next>
-                                            <FlowStep x:Name="__ReferenceID12">
+                                            <FlowStep x:Name="__ReferenceID5">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">350,1316.5</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,53</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">450,1369.5 450,1421</av:PointCollection>
+                                                  <av:Point x:Key="ShapeLocation">230,1898.5</av:Point>
+                                                  <av:Size x:Key="ShapeSize">200,83</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Switch x:TypeArguments="x:String" DisplayName="Weight in KG or Tonnes?" Expression="[in_Classification.DocumentTypeId.ToString]" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Switch`1_2">
-                                                <Switch.Default>
-                                                  <Assign DisplayName="Assign Weight Metric" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
-                                                    <Assign.To>
-                                                      <OutArgument x:TypeArguments="x:String">[strWeightMetric]</OutArgument>
-                                                    </Assign.To>
-                                                    <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:String">KG</InArgument>
-                                                    </Assign.Value>
-                                                  </Assign>
-                                                </Switch.Default>
-                                                <Assign x:Key="NoGroup.NoCategory.TransferNoteInformation" DisplayName="Assign Weight Metric" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
-                                                  <Assign.To>
-                                                    <OutArgument x:TypeArguments="x:String">[strWeightMetric]</OutArgument>
-                                                  </Assign.To>
-                                                  <Assign.Value>
-                                                    <InArgument x:TypeArguments="x:String">KG</InArgument>
-                                                  </Assign.Value>
-                                                </Assign>
-                                              </Switch>
-                                              <FlowStep.Next>
-                                                <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID13" DisplayName="Weight Metric?" Expression="[strWeightMetric]" sap:VirtualizedContainerService.HintSize="87,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">406.5,1421</av:Point>
-                                                      <av:Size x:Key="ShapeSize">87,87</av:Size>
-                                                      <av:PointCollection x:Key="KGConnector">406.5,1464.5 310,1464.5 310,1609</av:PointCollection>
-                                                      <av:PointCollection x:Key="TonnesConnector">493.5,1464.5 523.5,1464.5 523.5,2370.5 420,2370.5</av:PointCollection>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
-                                                  <FlowDecision x:Key="KG" x:Name="__ReferenceID11" Condition="[NOT(String.IsNullOrEmpty(dtFinalDataControlled.Rows(0).Item(&quot;Net Weight &quot;).ToString))]" DisplayName="Weight Extracted?" sap:VirtualizedContainerService.HintSize="101.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                        <av:Point x:Key="ShapeLocation">259.25,1609</av:Point>
-                                                        <av:Size x:Key="ShapeSize">101.5,87</av:Size>
-                                                        <x:String x:Key="FalseLabel">No</x:String>
-                                                        <x:String x:Key="TrueLabel">Yes</x:String>
-                                                        <av:PointCollection x:Key="TrueConnector">259.25,1652.5 107.5,1652.5 107.5,1807.5 310,1807.5 310,1839</av:PointCollection>
-                                                        <av:PointCollection x:Key="FalseConnector">360.75,1652.5 450,1652.5 450,2370.5 420,2370.5</av:PointCollection>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <FlowDecision.True>
-                                                      <FlowDecision x:Name="__ReferenceID10" Condition="[CBool(io_Config(&quot;boolPausePoint1&quot;))]" DisplayName="Pause Point 1 Enabled?" sap:VirtualizedContainerService.HintSize="128.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                              <Sequence DisplayName="Save Row to Excel" sap:VirtualizedContainerService.HintSize="642,928" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                                <Sequence.Variables>
+                                                  <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
+                                                </Sequence.Variables>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="580,817" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[io_Config(&quot;ResultsFolderFilepath&quot;).ToString+&quot;\OP PASCOE WTN Spreadsheet.xlsx&quot;]">
+                                                  <ui:ExcelApplicationScope.Body>
+                                                    <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="546,707" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                            <av:Point x:Key="ShapeLocation">245.75,1839</av:Point>
-                                                            <av:Size x:Key="ShapeSize">128.5,87</av:Size>
-                                                            <x:String x:Key="FalseLabel">No</x:String>
-                                                            <x:String x:Key="TrueLabel">Yes</x:String>
-                                                            <av:PointCollection x:Key="TrueConnector">245.75,1882.5 110,1882.5 110,1966</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <FlowDecision.True>
-                                                          <FlowStep x:Name="__ReferenceID9">
-                                                            <sap:WorkflowViewStateService.ViewState>
-                                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                <av:Point x:Key="ShapeLocation">10,1966</av:Point>
-                                                                <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                <av:PointCollection x:Key="ConnectorLocation">110,2049 110,2370.5 220,2370.5</av:PointCollection>
-                                                              </scg:Dictionary>
-                                                            </sap:WorkflowViewStateService.ViewState>
-                                                            <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                                                              <Sequence.Variables>
-                                                                <Variable x:TypeArguments="x:String" Name="strDataAsTable" />
-                                                              </Sequence.Variables>
-                                                              <sap:WorkflowViewStateService.ViewState>
-                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                </scg:Dictionary>
-                                                              </sap:WorkflowViewStateService.ViewState>
-                                                              <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="486,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
-                                                                <InvokeMethod.TargetObject>
-                                                                  <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
-                                                                </InvokeMethod.TargetObject>
-                                                              </InvokeMethod>
-                                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,215" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                                                <ui:CommentOut.Body>
-                                                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_21">
-                                                                    <sap:WorkflowViewStateService.ViewState>
-                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                      </scg:Dictionary>
-                                                                    </sap:WorkflowViewStateService.ViewState>
-                                                                    <p5:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="388,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please Check Data&lt;/h1&gt;&lt;br&gt;&lt;br&gt;Please check the weight conversion has been completed correctly.&lt;br&gt;&lt;br&gt;&quot;+&quot;Weight (Kilos): &quot;+dtFinalDataControlled.Rows(0).Item(&quot;Weight (Tonnes)&quot;).ToString+&quot;&lt;br&gt;Weight Tonnes: &quot;+(CType(dtFinalDataControlled.Rows(0).Item(&quot;Weight (Tonnes)&quot;), Double)/1000).ToString+&quot;&lt;br&gt;&lt;br&gt;Once you are happy, please press continue.&quot;]" IN_PopupTitle="Pause Point 1" IN_WidthHeight="[{600,600}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
-                                                                  </Sequence>
-                                                                </ui:CommentOut.Body>
-                                                              </ui:CommentOut>
-                                                              <InvokeMethod DisplayName="Start Stopwatch" sap:VirtualizedContainerService.HintSize="486,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
-                                                                <InvokeMethod.TargetObject>
-                                                                  <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
-                                                                </InvokeMethod.TargetObject>
-                                                              </InvokeMethod>
-                                                            </Sequence>
-                                                            <FlowStep.Next>
-                                                              <FlowStep x:Name="__ReferenceID0">
-                                                                <sap:WorkflowViewStateService.ViewState>
-                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                    <av:Point x:Key="ShapeLocation">220,2329</av:Point>
-                                                                    <av:Size x:Key="ShapeSize">200,83</av:Size>
-                                                                  </scg:Dictionary>
-                                                                </sap:WorkflowViewStateService.ViewState>
-                                                                <Sequence DisplayName="Save Row to Excel" sap:VirtualizedContainerService.HintSize="546,548" sap2010:WorkflowViewState.IdRef="Sequence_4">
-                                                                  <Sequence.Variables>
-                                                                    <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
-                                                                  </Sequence.Variables>
-                                                                  <sap:WorkflowViewStateService.ViewState>
-                                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                    </scg:Dictionary>
-                                                                  </sap:WorkflowViewStateService.ViewState>
-                                                                  <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="484,437" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[io_Config(&quot;ResultsFolderFilepath&quot;).ToString+&quot;\OP PASCOE WTN Spreadsheet.xlsx&quot;]">
-                                                                    <ui:ExcelApplicationScope.Body>
-                                                                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-                                                                        <ActivityAction.Argument>
-                                                                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-                                                                        </ActivityAction.Argument>
-                                                                        <Sequence sap:VirtualizedContainerService.HintSize="450,327" sap2010:WorkflowViewState.IdRef="Sequence_26">
-                                                                          <sap:WorkflowViewStateService.ViewState>
-                                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                                            </scg:Dictionary>
-                                                                          </sap:WorkflowViewStateService.ViewState>
-                                                                          <ui:ExcelAppendRange DataTable="[dtFinalDataControlled]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_2" SheetName="Controlled Waste" />
-                                                                          <ui:ExcelAppendRange DataTable="[dtFinalDataNorthern]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_3" SheetName="Northern Waste" />
-                                                                        </Sequence>
-                                                                      </ActivityAction>
-                                                                    </ui:ExcelApplicationScope.Body>
-                                                                  </ui:ExcelApplicationScope>
-                                                                </Sequence>
-                                                              </FlowStep>
-                                                            </FlowStep.Next>
-                                                          </FlowStep>
-                                                        </FlowDecision.True>
-                                                      </FlowDecision>
-                                                    </FlowDecision.True>
-                                                    <FlowDecision.False>
-                                                      <x:Reference>__ReferenceID0</x:Reference>
-                                                    </FlowDecision.False>
-                                                  </FlowDecision>
-                                                  <x:Reference>__ReferenceID0<x:Key>Tonnes</x:Key></x:Reference>
-                                                </FlowSwitch>
-                                              </FlowStep.Next>
+                                                        <If Condition="[IsNothing(dtFinalDataControlled)]" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_8">
+                                                          <If.Then>
+                                                            <ui:ExcelAppendRange DataTable="[dtFinalDataControlled]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_2" SheetName="Controlled Waste" />
+                                                          </If.Then>
+                                                        </If>
+                                                        <If Condition="[IsNothing(dtFinalDataNorthern)]" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_9">
+                                                          <If.Then>
+                                                            <ui:ExcelAppendRange DataTable="[dtFinalDataNorthern]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_3" SheetName="Northern Waste" />
+                                                          </If.Then>
+                                                        </If>
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ui:ExcelApplicationScope.Body>
+                                                </ui:ExcelApplicationScope>
+                                              </Sequence>
                                             </FlowStep>
                                           </FlowStep.Next>
                                         </FlowStep>
@@ -707,7 +584,7 @@
                                     </FlowStep>
                                   </FlowDecision.True>
                                   <FlowDecision.False>
-                                    <x:Reference>__ReferenceID1</x:Reference>
+                                    <x:Reference>__ReferenceID0</x:Reference>
                                   </FlowDecision.False>
                                 </FlowDecision>
                               </FlowStep.Next>
@@ -718,7 +595,7 @@
                     </FlowStep>
                   </FlowDecision.True>
                   <FlowDecision.False>
-                    <FlowStep x:Name="__ReferenceID15">
+                    <FlowStep x:Name="__ReferenceID14">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">529.75,619.5</av:Point>
@@ -728,7 +605,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <p2:ExportExtractionResults DataSet="[dsDataSetNorthern]" DisplayName="Export Extraction Results" ExtractionResult="[erExtractionResult]" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_5" IncludeConfidence="False" IncludeOCRConfidence="False" />
                       <FlowStep.Next>
-                        <x:Reference>__ReferenceID2</x:Reference>
+                        <x:Reference>__ReferenceID1</x:Reference>
                       </FlowStep.Next>
                     </FlowStep>
                   </FlowDecision.False>
@@ -739,13 +616,13 @@
         </FlowStep>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID3</x:Reference>
-    <FlowStep x:Name="__ReferenceID17">
+    <x:Reference>__ReferenceID2</x:Reference>
+    <FlowStep x:Name="__ReferenceID16">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">340,127.5</av:Point>
           <av:Size x:Key="ShapeSize">200,69</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">440,195.5 440,244.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">440,196.5 440,226.5 510,226.5 510,238.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <p4:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="200,69" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[oTaxonomy]">
@@ -756,13 +633,13 @@
         </sap:WorkflowViewStateService.ViewState>
       </p4:LoadTaxonomy>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID4</x:Reference>
+        <x:Reference>__ReferenceID3</x:Reference>
       </FlowStep.Next>
     </FlowStep>
+    <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
-    <x:Reference>__ReferenceID2</x:Reference>
+    <x:Reference>__ReferenceID1</x:Reference>
     <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -774,14 +651,121 @@
     </FlowStep>
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
-    <x:Reference>__ReferenceID9</x:Reference>
-    <x:Reference>__ReferenceID10</x:Reference>
-    <x:Reference>__ReferenceID11</x:Reference>
+    <FlowStep x:Name="__ReferenceID9">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">0,1773</av:Point>
+          <av:Size x:Key="ShapeSize">200,83</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">100,1856 100,1940 230,1940</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_19">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="strDataAsTable" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <InvokeMethod DisplayName="Stop Stopwatch" sap:VirtualizedContainerService.HintSize="486,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_5" MethodName="Stop">
+          <InvokeMethod.TargetObject>
+            <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
+          </InvokeMethod.TargetObject>
+        </InvokeMethod>
+        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,215" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut.Body>
+            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_21">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p5:Generic_PopUp OUT_ProcessType="{x:Null}" OUT_strButtonSelected="{x:Null}" DisplayName="Pause Point 1" sap:VirtualizedContainerService.HintSize="388,25" IN_CSS_filepath="[&quot;/file://&quot; + Directory.GetCurrentDirectory + &quot;\Assets\Generic\PausePoint.css&quot;]" IN_ErrorMessage="The stop button was pressed" IN_PopupMessage="[&quot;&lt;h1&gt;Please Check Data&lt;/h1&gt;&lt;br&gt;&lt;br&gt;Please check the weight conversion has been completed correctly.&lt;br&gt;&lt;br&gt;&quot;+&quot;Weight (Kilos): &quot;+dtFinalDataControlled.Rows(0).Item(&quot;Weight (Tonnes)&quot;).ToString+&quot;&lt;br&gt;Weight Tonnes: &quot;+(CType(dtFinalDataControlled.Rows(0).Item(&quot;Weight (Tonnes)&quot;), Double)/1000).ToString+&quot;&lt;br&gt;&lt;br&gt;Once you are happy, please press continue.&quot;]" IN_PopupTitle="Pause Point 1" IN_WidthHeight="[{600,600}]" sap2010:WorkflowViewState.IdRef="Generic_PopUp_1" />
+            </Sequence>
+          </ui:CommentOut.Body>
+        </ui:CommentOut>
+        <InvokeMethod DisplayName="Start Stopwatch" sap:VirtualizedContainerService.HintSize="486,137" sap2010:WorkflowViewState.IdRef="InvokeMethod_6" MethodName="Start">
+          <InvokeMethod.TargetObject>
+            <InArgument x:TypeArguments="sd:Stopwatch">[io_swProcessingTimer]</InArgument>
+          </InvokeMethod.TargetObject>
+        </InvokeMethod>
+      </Sequence>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID5</x:Reference>
+      </FlowStep.Next>
+    </FlowStep>
+    <FlowDecision x:Name="__ReferenceID10" Condition="[CBool(io_Config(&quot;boolPausePoint1&quot;))]" DisplayName="Pause Point 1 Enabled?" sap:VirtualizedContainerService.HintSize="128.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2" True="{x:Reference __ReferenceID9}">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">76.5,1621</av:Point>
+          <av:Size x:Key="ShapeSize">128.5,87</av:Size>
+          <x:String x:Key="FalseLabel">No</x:String>
+          <x:String x:Key="TrueLabel">Yes</x:String>
+          <av:PointCollection x:Key="TrueConnector">76.5,1664.5 46.5,1664.5 46.5,1743 100,1743 100,1773</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </FlowDecision>
+    <FlowDecision x:Name="__ReferenceID11" Condition="[NOT(String.IsNullOrEmpty(dtFinalDataControlled.Rows(0).Item(&quot;Net Weight &quot;).ToString))]" DisplayName="Weight Extracted?" sap:VirtualizedContainerService.HintSize="101.5,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID10}" False="{x:Reference __ReferenceID5}">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <av:Point x:Key="ShapeLocation">255,1521</av:Point>
+          <av:Size x:Key="ShapeSize">101.5,87</av:Size>
+          <x:String x:Key="FalseLabel">No</x:String>
+          <x:String x:Key="TrueLabel">Yes</x:String>
+          <av:PointCollection x:Key="TrueConnector">255,1564.5 140.75,1564.5 140.75,1621</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">356.5,1564.5 460,1564.5 460,1940 430,1940</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </FlowDecision>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">350,1316.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,53</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">450,1369.5 450,1421</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Switch x:TypeArguments="x:String" DisplayName="Weight in KG or Tonnes?" Expression="[in_Classification.DocumentTypeId.ToString]" sap:VirtualizedContainerService.HintSize="200,53" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+        <Switch.Default>
+          <Assign DisplayName="Assign Weight Metric" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strWeightMetric]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">KG</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Switch.Default>
+        <Assign x:Key="NoGroup.NoCategory.TransferNoteInformation" DisplayName="Assign Weight Metric" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strWeightMetric]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">KG</InArgument>
+          </Assign.Value>
+        </Assign>
+      </Switch>
+      <FlowStep.Next>
+        <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID11}" x:Name="__ReferenceID12" DisplayName="Weight Metric?" Expression="[strWeightMetric]" sap:VirtualizedContainerService.HintSize="87,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <av:Point x:Key="ShapeLocation">406.5,1421</av:Point>
+              <av:Size x:Key="ShapeSize">87,87</av:Size>
+              <av:PointCollection x:Key="Default">406.5,1464.5 305.75,1464.5 305.75,1521</av:PointCollection>
+              <av:PointCollection x:Key="TonnesConnector">493.5,1464.5 523.5,1464.5 523.5,1940 430,1940</av:PointCollection>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <x:Reference>__ReferenceID5<x:Key>Tonnes</x:Key></x:Reference>
+        </FlowSwitch>
+      </FlowStep.Next>
+    </FlowStep>
     <x:Reference>__ReferenceID12</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID13</x:Reference>
-    <x:Reference>__ReferenceID1</x:Reference>
     <x:Reference>__ReferenceID14</x:Reference>
     <x:Reference>__ReferenceID15</x:Reference>
-    <x:Reference>__ReferenceID16</x:Reference>
   </Flowchart>
 </Activity>
