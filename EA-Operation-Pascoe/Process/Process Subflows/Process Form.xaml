@@ -122,7 +122,6 @@
       <AssemblyReference>UiPathTeam.SharePoint.Activities</AssemblyReference>
       <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Process Form" sap:VirtualizedContainerService.HintSize="764,2449" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -253,7 +252,7 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="Assign Page Consumption Factor" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign DisplayName="Assign Page Consumption Factor" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Double">[dblPageConsumptionFactor]</OutArgument>
                   </Assign.To>
@@ -261,7 +260,7 @@
                     <InArgument x:TypeArguments="x:Double">[CType(io_Config("DUConsumptionFactor"), Double)]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="Calculate License Consumption" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign DisplayName="Calculate License Consumption" sap:VirtualizedContainerService.HintSize="434,83" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
                     <OutArgument x:TypeArguments="x:Double">[dblLicenseConsumption]</OutArgument>
                   </Assign.To>
@@ -541,7 +540,7 @@
                                                   <av:Size x:Key="ShapeSize">200,83</av:Size>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Save Row to Excel" sap:VirtualizedContainerService.HintSize="642,928" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                              <Sequence DisplayName="Save Row to Excel" sap:VirtualizedContainerService.HintSize="642,868" sap2010:WorkflowViewState.IdRef="Sequence_4">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:Boolean" Name="boolFileExists" />
                                                 </Sequence.Variables>
@@ -550,27 +549,27 @@
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="580,817" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[io_Config(&quot;ResultsFolderFilepath&quot;).ToString+&quot;\OP PASCOE WTN Spreadsheet.xlsx&quot;]">
+                                                <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="580,757" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_4" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[io_Config(&quot;ResultsFolderFilepath&quot;).ToString+&quot;\OP PASCOE WTN Spreadsheet.xlsx&quot;]">
                                                   <ui:ExcelApplicationScope.Body>
                                                     <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence sap:VirtualizedContainerService.HintSize="546,707" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                                      <Sequence sap:VirtualizedContainerService.HintSize="546,647" sap2010:WorkflowViewState.IdRef="Sequence_26">
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <If Condition="[IsNothing(dtFinalDataControlled)]" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_8">
-                                                          <If.Then>
+                                                        <If Condition="[IsNothing(dtFinalDataControlled)]" sap:VirtualizedContainerService.HintSize="484,248" sap2010:WorkflowViewState.IdRef="If_8">
+                                                          <If.Else>
                                                             <ui:ExcelAppendRange DataTable="[dtFinalDataControlled]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_2" SheetName="Controlled Waste" />
-                                                          </If.Then>
+                                                          </If.Else>
                                                         </If>
-                                                        <If Condition="[IsNothing(dtFinalDataNorthern)]" sap:VirtualizedContainerService.HintSize="484,278" sap2010:WorkflowViewState.IdRef="If_9">
-                                                          <If.Then>
+                                                        <If Condition="[IsNothing(dtFinalDataNorthern)]" sap:VirtualizedContainerService.HintSize="484,248" sap2010:WorkflowViewState.IdRef="If_9">
+                                                          <If.Else>
                                                             <ui:ExcelAppendRange DataTable="[dtFinalDataNorthern]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,88" sap2010:WorkflowViewState.IdRef="ExcelAppendRange_3" SheetName="Northern Waste" />
-                                                          </If.Then>
+                                                          </If.Else>
                                                         </If>
                                                       </Sequence>
                                                     </ActivityAction>

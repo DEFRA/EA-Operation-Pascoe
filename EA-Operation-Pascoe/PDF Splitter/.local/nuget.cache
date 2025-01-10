@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J6yM3LT/9XsOr8iKx1TTeZ6qrZOupfYqzKYYshXGtAoeuX6gPFWROWP1YTn2IYxIa4WoWONXi6vFiS4cy4SZcQ==",
+  "dgSpecHash": "ocPKU623suD74EMTdmz9zQZkLnnsVpjqdCzClN6+j8MnUxNQG2M7IK+kaOTIQkuUYnqtzGzb7Frrr0KcqxrrqQ==",
   "success": false,
-  "projectFilePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local\\",
+  "projectFilePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local\\",
   "expectedPackageFiles": [
     "C:\\Users\\rj000088\\.nuget\\packages\\anglesharp\\0.9.9\\anglesharp.0.9.9.nupkg.sha512",
     "C:\\Users\\rj000088\\.nuget\\packages\\avalonedit\\6.0.1\\avalonedit.6.0.1.nupkg.sha512",
@@ -148,7 +148,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "message": "UiPath.UIAutomation.Activities 20.4.2 depends on UiPath.Telemetry.Client (>= 1.2.20) but UiPath.Telemetry.Client 1.2.20 was not found. An approximate best match of UiPath.Telemetry.Client 1.3.18 was resolved.",
       "libraryId": "UiPath.Telemetry.Client",
       "targetGraphs": [
@@ -160,7 +160,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "message": "Detected package version outside of dependency constraint: Microsoft.Graph 1.9.0 requires Newtonsoft.Json (>= 6.0.1 && < 12.0.0) but version Newtonsoft.Json 13.0.1 was resolved.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
@@ -172,7 +172,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "message": "Detected package version outside of dependency constraint: Microsoft.Graph.Core 1.9.0 requires Newtonsoft.Json (>= 6.0.1 && < 12.0.0) but version Newtonsoft.Json 13.0.1 was resolved.",
       "libraryId": "Newtonsoft.Json",
       "targetGraphs": [
@@ -183,7 +183,7 @@
     {
       "code": "NU1202",
       "level": "Error",
-      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "message": "Package SharePoint 15.0.0 is not compatible with net461 (.NETFramework,Version=v4.6.1). Package SharePoint 15.0.0 supports: microsoftsharepoint (Microsoft.SharePoint,Version=v0.0)",
       "libraryId": "SharePoint",
       "targetGraphs": [
@@ -193,7 +193,7 @@
     {
       "code": "NU1202",
       "level": "Error",
-      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "filePath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "message": "Package SharePoint 15.0.0 is not compatible with net461 (.NETFramework,Version=v4.6.1) / win10-x64. Package SharePoint 15.0.0 supports: microsoftsharepoint (Microsoft.SharePoint,Version=v0.0)",
       "libraryId": "SharePoint",
       "targetGraphs": [

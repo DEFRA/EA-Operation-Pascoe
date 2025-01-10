@@ -16678,9 +16678,9 @@
     "restore": {
       "projectUniqueName": "PDF Splitter",
       "projectName": "PDF Splitter",
-      "projectPath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
+      "projectPath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local",
       "packagesPath": "C:\\Users\\rj000088\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\UiPath\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local"
+      "outputPath": "C:\\Users\\rj000088\\OneDrive - Defra\\Documents\\GitHub\\EA-Operation-Pascoe\\EA-Operation-Pascoe\\PDF Splitter\\.local"
     },
     "frameworks": {
       "net461": {
