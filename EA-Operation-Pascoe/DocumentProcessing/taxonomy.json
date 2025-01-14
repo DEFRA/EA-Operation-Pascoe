@@ -549,6 +549,27 @@
           ],
           "RuleSet": null,
           "DefaultValue": ""
+        },
+        {
+          "FieldId": "WasteTransferNote.NoCategory.WasteNote2.DisposalSite",
+          "FieldName": "Disposal Site",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#4a73fb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": ""
         }
       ]
     }
